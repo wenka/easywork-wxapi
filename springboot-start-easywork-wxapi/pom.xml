@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>easywork-wxapi</artifactId>
+        <groupId>com.easywork</groupId>
+        <version>1.0.2-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>springboot-start-easywork-wxapi</artifactId>
+
+    <properties>
+        <springboot-version>2.1.3.RELEASE</springboot-version>
+        <wxapi-version>0.0.1-SNAPSHOT</wxapi-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${springboot-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>${springboot-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.easywork</groupId>
+            <artifactId>easywork-wxapi-core</artifactId>
+            <version>${wxapi-version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
