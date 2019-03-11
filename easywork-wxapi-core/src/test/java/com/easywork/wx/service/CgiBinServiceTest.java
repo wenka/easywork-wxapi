@@ -16,6 +16,8 @@ public class CgiBinServiceTest extends BaseService {
 
     private WXConfig wxConfig;
 
+    String accessToken = "19_1cj_foqld0_Ddkbgy-ts5xQiq6APfq9xAUiAOq8KxAFbkeunZat1CTKDVU_rFhXeOU8HZocpJt0cXEMYptZLOktCyauPYnsKA3ox2UXc0foVgRfpztDxWAVNI5uYTIYOmX3viU7qWNwEnGTWDPYjAHAJVE";
+
     @Before
     public void init() {
         wxConfig = new WXConfig();
@@ -28,6 +30,12 @@ public class CgiBinServiceTest extends BaseService {
         CgiBinService cgiBinService = new CgiBinService(WXClient.build(wxConfig.getDomain()).buildCgiBinApi(), wxConfig);
         AccessTokenResp accessToken = cgiBinService.getAccessToken();
         System.out.println(accessToken);
+    }
+
+    @Test
+    public void deleteMenu(){
+        CgiBinService cgiBinService = new CgiBinService(WXClient.build(wxConfig.getDomain()).buildCgiBinApi(), wxConfig);
+        cgiBinService.deleteMenu(accessToken);
     }
 }
 

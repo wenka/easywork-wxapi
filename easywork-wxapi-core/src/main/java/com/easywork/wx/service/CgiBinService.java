@@ -96,7 +96,7 @@ public class CgiBinService extends BaseService {
     }
 
     /**
-     * 自定义菜单创建接口
+     * 自定义菜单查询接口
      *
      * @param accessToken
      * @return
@@ -106,6 +106,24 @@ public class CgiBinService extends BaseService {
         try {
             Response<MenuResp> execute = call.execute();
             MenuResp body = execute.body();
+            return body;
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw WXException.build(WXErrorCode.REQUEST_ERR);
+        }
+    }
+
+    /**
+     * 删除默认菜单及全部个性化菜单。
+     *
+     * @param accessToken
+     * @return
+     */
+    public BaseResp deleteMenu(String accessToken) {
+        Call<BaseResp> baseRespCall = this.cgiBinApi.deleteMenu(accessToken);
+        try {
+            Response<BaseResp> execute = baseRespCall.execute();
+            BaseResp body = execute.body();
             return body;
         } catch (IOException e) {
             e.printStackTrace();

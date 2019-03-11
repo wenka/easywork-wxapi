@@ -1,5 +1,6 @@
 package com.easywork.wx.api;
 
+import com.easywork.wx.model.BaseResp;
 import com.easywork.wx.model.req.MenuReq;
 import com.easywork.wx.model.resp.MenuResp;
 import retrofit2.Call;
@@ -55,4 +56,13 @@ public interface CgiBinApi {
      */
     @GET("menu/get")
     Call<MenuResp> getMenu(@Query("access_token") String accessToken);
+
+    /**
+     * 删除默认菜单及全部个性化菜单。
+     *
+     * @param accessToken
+     * @return
+     */
+    @GET("menu/delete")
+    Call<BaseResp> deleteMenu(@Query("access_token") String accessToken);
 }
