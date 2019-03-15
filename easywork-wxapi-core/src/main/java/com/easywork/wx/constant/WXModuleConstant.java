@@ -10,5 +10,6 @@ public final class WXModuleConstant {
 
     public final static String CGI_BIN = "cgi-bin";
     public final static String SNS = "sns";
+    public final static String DATACUBE = "datacube";
 
 }

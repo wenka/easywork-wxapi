@@ -7,7 +7,7 @@
     <groupId>com.easywork</groupId>
     <artifactId>easywork-wxapi</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <modules>
         <module>easywork-wxapi-core</module>
         <module>springboot-start-easywork-wxapi</module>
@@ -16,7 +16,7 @@
     <distributionManagement>
         <repository>
             <id>ew</id>
-            <url>http://39.105.171.26:8081/repository/easywork/</url>
+            <url>http://www.wenka.top:8081/nexus/content/repositories/ew/</url>
         </repository>
     </distributionManagement>
 

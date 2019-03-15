@@ -1,6 +1,7 @@
 package com.easywork.wx.client;
 
 import com.easywork.wx.api.CgiBinApi;
+import com.easywork.wx.api.DatacubeApi;
 import com.easywork.wx.api.SnsApi;
 import com.easywork.wx.constant.WXModuleConstant;
 import retrofit2.Retrofit;
@@ -50,4 +51,11 @@ public class WXClient {
         return retrofit.create(SnsApi.class);
     }
 
+    public DatacubeApi buildDatacubeApi() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(baseUrl + "/" + WXModuleConstant.DATACUBE + "/")
+                .addConverterFactory(JacksonConverterFactory.create())
+                .build();
+        return retrofit.create(DatacubeApi.class);
+    }
 }
